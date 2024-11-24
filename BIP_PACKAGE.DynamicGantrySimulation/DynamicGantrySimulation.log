@@ -1,0 +1,26 @@
+/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.DynamicGantrySimulation/DynamicGantrySimulation -port=39235 -logFormat=xmltcp -override=startTime=0,stopTime=20,stepSize=0.004,tolerance=1e-06,solver=dassl,outputFormat=mat,variableFilter=.* -r=/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.DynamicGantrySimulation/DynamicGantrySimulation_res.mat -w -lv=LOG_STDOUT,LOG_ASSERT,LOG_STATS -inputPath=/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.DynamicGantrySimulation -outputPath=/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.DynamicGantrySimulation
+The initialization finished successfully without homotopy method.
+### STATISTICS ###
+timer
+  0.00199172s          reading init.xml
+ 0.000265314s          reading info.xml
+  0.00119299s [  1.8%] pre-initialization
+ 0.000118415s [  0.2%] initialization
+    6.71e-06s [  0.0%] steps
+  0.00722838s [ 11.1%] solver (excl. callbacks)
+  0.00831446s [ 12.8%] creating output-file
+   0.0021123s [  3.2%] event-handling
+  0.00274573s [  4.2%] overhead
+   0.0432944s [ 66.6%] simulation
+   0.0650133s [100.0%] total
+events
+    1 state events
+    0 time events
+solver: dassl
+  358 steps taken
+  399 calls of functionODE
+   41 evaluations of jacobian
+    1 error test failures
+    0 convergence test failures
+9.1711e-05s time of jacobian evaluation
+The simulation finished successfully.

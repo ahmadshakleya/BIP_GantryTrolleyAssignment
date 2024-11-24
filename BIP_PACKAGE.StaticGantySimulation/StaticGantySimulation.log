@@ -1,0 +1,26 @@
+/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.StaticGantySimulation/StaticGantySimulation -port=44873 -logFormat=xmltcp -override=startTime=0,stopTime=20,stepSize=0.004,tolerance=1e-06,solver=dassl,outputFormat=mat,variableFilter=.* -r=/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.StaticGantySimulation/StaticGantySimulation_res.mat -w -lv=LOG_STDOUT,LOG_ASSERT,LOG_STATS -inputPath=/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.StaticGantySimulation -outputPath=/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.StaticGantySimulation
+The initialization finished successfully without homotopy method.
+### STATISTICS ###
+timer
+ 0.000717927s          reading init.xml
+ 0.000144808s          reading info.xml
+ 0.000186667s [  0.3%] pre-initialization
+  8.6613e-05s [  0.1%] initialization
+   4.478e-06s [  0.0%] steps
+  0.00299378s [  4.9%] solver (excl. callbacks)
+  0.00778092s [ 12.6%] creating output-file
+  0.00156229s [  2.5%] event-handling
+  0.00170177s [  2.8%] overhead
+   0.0473122s [ 76.8%] simulation
+   0.0616287s [100.0%] total
+events
+    0 state events
+    0 time events
+solver: dassl
+   23 steps taken
+   23 calls of functionODE
+   22 evaluations of jacobian
+    0 error test failures
+    0 convergence test failures
+5.8367e-05s time of jacobian evaluation
+The simulation finished successfully.

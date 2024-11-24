@@ -1,0 +1,26 @@
+/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.GantryTrolley/GantryTrolley -port=35891 -logFormat=xmltcp -override=startTime=0,stopTime=1,stepSize=0.002,tolerance=1e-06,solver=dassl,outputFormat=mat,variableFilter=.* -r=/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.GantryTrolley/GantryTrolley_res.mat -w -lv=LOG_STDOUT,LOG_ASSERT,LOG_STATS -inputPath=/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.GantryTrolley -outputPath=/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.GantryTrolley
+The initialization finished successfully without homotopy method.
+### STATISTICS ###
+timer
+ 0.000816983s          reading init.xml
+ 0.000176313s          reading info.xml
+ 0.000372808s [ 11.0%] pre-initialization
+ 0.000115417s [  3.4%] initialization
+    2.99e-06s [  0.1%] steps
+ 0.000159321s [  4.7%] solver (excl. callbacks)
+ 0.000469201s [ 13.9%] creating output-file
+   6.522e-06s [  0.2%] event-handling
+  8.8264e-05s [  2.6%] overhead
+  0.00216899s [ 64.1%] simulation
+  0.00338351s [100.0%] total
+events
+    0 state events
+    0 time events
+solver: dassl
+   19 steps taken
+   19 calls of functionODE
+   18 evaluations of jacobian
+    0 error test failures
+    0 convergence test failures
+2.4349e-05s time of jacobian evaluation
+The simulation finished successfully.

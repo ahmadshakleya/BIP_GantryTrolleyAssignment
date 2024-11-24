@@ -1,0 +1,22 @@
+{"format":"Transformational debugger info","version":1,
+"info":{"name":"BIP_CandC_PACKAGE.GantryTrolley_PendulumLock","description":""},
+"variables":{
+"v":{"comment":"Velocity of trolley","kind":"state","type":"Real","unit":"m/s","displayUnit":"","source":{"info":{"file":"/home/ahmadshakleya/Documents/Modelica/Model/BIP_CandC_PACKAGE.mo","lineStart":11,"lineEnd":11,"colStart":5,"colEnd":40}}},
+"x":{"comment":"Displacement of trolley","kind":"state","type":"Real","unit":"m","displayUnit":"","source":{"info":{"file":"/home/ahmadshakleya/Documents/Modelica/Model/BIP_CandC_PACKAGE.mo","lineStart":10,"lineEnd":10,"colStart":5,"colEnd":44}}},
+"der(v)":{"comment":"der(Velocity of trolley)","kind":"derivative","type":"Real","unit":"m.s-2","displayUnit":"","source":{"info":{"file":"/home/ahmadshakleya/Documents/Modelica/Model/BIP_CandC_PACKAGE.mo","lineStart":11,"lineEnd":11,"colStart":5,"colEnd":40}}},
+"der(x)":{"comment":"der(Displacement of trolley)","kind":"derivative","type":"Real","unit":"m.s-1","displayUnit":"","source":{"info":{"file":"/home/ahmadshakleya/Documents/Modelica/Model/BIP_CandC_PACKAGE.mo","lineStart":10,"lineEnd":10,"colStart":5,"colEnd":44}}},
+"M":{"comment":"Mass of trolley","kind":"parameter","type":"Real","unit":"kg","displayUnit":"","source":{"info":{"file":"/home/ahmadshakleya/Documents/Modelica/Model/BIP_CandC_PACKAGE.mo","lineStart":7,"lineEnd":7,"colStart":5,"colEnd":47}}},
+"dc":{"comment":"Damping factor for trolley","kind":"parameter","type":"Real","unit":"N.s/m","displayUnit":"","source":{"info":{"file":"/home/ahmadshakleya/Documents/Modelica/Model/BIP_CandC_PACKAGE.mo","lineStart":8,"lineEnd":8,"colStart":5,"colEnd":73}}}
+},
+"equations":[{"eqIndex":0,"tag":"dummy"},
+{"eqIndex":1,"section":"initial","tag":"assign","defines":["x"],"uses":["$START.x"],"equation":["$START.x"],"source":{"info":{"file":"","lineStart":0,"lineEnd":0,"colStart":0,"colEnd":0}}},
+{"eqIndex":2,"section":"initial","tag":"assign","defines":["v"],"uses":["$START.v"],"equation":["$START.v"],"source":{"info":{"file":"","lineStart":0,"lineEnd":0,"colStart":0,"colEnd":0}}},
+{"eqIndex":3,"tag":"alias","equation":[5],"section":"initial"},
+{"eqIndex":4,"tag":"alias","equation":[6],"section":"initial"},
+{"eqIndex":5,"section":"regular","tag":"assign","defines":["der(v)"],"uses":["M","v","dc"],"equation":["(-v) * dc / M"],"source":{"info":{"file":"/home/ahmadshakleya/Documents/Modelica/Model/BIP_CandC_PACKAGE.mo","lineStart":14,"lineEnd":14,"colStart":5,"colEnd":23}}},
+{"eqIndex":6,"section":"regular","tag":"assign","defines":["der(x)"],"uses":["v"],"equation":["v"],"source":{"info":{"file":"/home/ahmadshakleya/Documents/Modelica/Model/BIP_CandC_PACKAGE.mo","lineStart":13,"lineEnd":13,"colStart":5,"colEnd":15}}},
+{"eqIndex":7,"section":"parameter","tag":"algorithm","equation":["assert(M >= 0.0, \"Variable violating min constraint: 0.0 <= M, has value: \" + String(M, \"g\"));"],"source":{"info":{"file":"/home/ahmadshakleya/Documents/Modelica/Model/BIP_CandC_PACKAGE.mo","lineStart":7,"lineEnd":7,"colStart":5,"colEnd":47}}}
+],
+"functions":[
+]
+}

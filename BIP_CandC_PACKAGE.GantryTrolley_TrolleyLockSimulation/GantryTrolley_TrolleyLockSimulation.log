@@ -1,0 +1,26 @@
+/home/ahmadshakleya/Documents/Modelica/Model/BIP_CandC_PACKAGE.GantryTrolley_TrolleyLockSimulation/GantryTrolley_TrolleyLockSimulation -port=37179 -logFormat=xmltcp -override=startTime=0,stopTime=20,stepSize=0.004,tolerance=1e-06,solver=dassl,outputFormat=mat,variableFilter=.* -r=/home/ahmadshakleya/Documents/Modelica/Model/BIP_CandC_PACKAGE.GantryTrolley_TrolleyLockSimulation/GantryTrolley_TrolleyLockSimulation_res.mat -w -lv=LOG_STDOUT,LOG_ASSERT,LOG_STATS -inputPath=/home/ahmadshakleya/Documents/Modelica/Model/BIP_CandC_PACKAGE.GantryTrolley_TrolleyLockSimulation -outputPath=/home/ahmadshakleya/Documents/Modelica/Model/BIP_CandC_PACKAGE.GantryTrolley_TrolleyLockSimulation
+The initialization finished successfully without homotopy method.
+### STATISTICS ###
+timer
+  0.00120896s          reading init.xml
+ 0.000454937s          reading info.xml
+  0.00065937s [  2.4%] pre-initialization
+ 0.000247829s [  0.9%] initialization
+   2.797e-06s [  0.0%] steps
+  0.00240583s [  8.9%] solver (excl. callbacks)
+  0.00265525s [  9.8%] creating output-file
+ 0.000108703s [  0.4%] event-handling
+  0.00141056s [  5.2%] overhead
+   0.0195477s [ 72.3%] simulation
+    0.027038s [100.0%] total
+events
+    0 state events
+    0 time events
+solver: dassl
+  215 steps taken
+  282 calls of functionODE
+   27 evaluations of jacobian
+    1 error test failures
+    0 convergence test failures
+2.8448e-05s time of jacobian evaluation
+The simulation finished successfully.

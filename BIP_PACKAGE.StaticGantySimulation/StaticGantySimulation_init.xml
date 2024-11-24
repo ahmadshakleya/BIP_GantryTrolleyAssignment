@@ -1,0 +1,280 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+
+<!-- description of the model interface using an extention of the FMI standard -->
+<fmiModelDescription
+  fmiVersion                          = "1.0"
+
+  modelName                           = "BIP_PACKAGE.StaticGantySimulation"
+  modelIdentifier                     = "BIP_PACKAGE_StaticGantySimulation"
+
+  OPENMODELICAHOME                    = "/usr/bin/.."
+
+  guid                                = "{576a7133-a62b-450c-9d95-62bccf09ee29}"
+
+  description                         = ""
+  generationTool                      = "OpenModelica Compiler OpenModelica 1.24.0"
+  generationDateAndTime               = "2024-11-24T09:16:08Z"
+
+  variableNamingConvention            = "structured"
+
+  numberOfEventIndicators             = "0"  cmt_numberOfEventIndicators             = "NG:       number of zero crossings,                           FMI"
+  numberOfTimeEvents                  = "0"  cmt_numberOfTimeEvents                  = "NG_SAM:   number of zero crossings that are samples,          OMC"
+
+  numberOfInputVariables              = "0"  cmt_numberOfInputVariables              = "NI:       number of inputvar on topmodel,                     OMC"
+  numberOfOutputVariables             = "0"  cmt_numberOfOutputVariables             = "NO:       number of outputvar on topmodel,                    OMC"
+
+  numberOfExternalObjects             = "0"  cmt_numberOfExternalObjects             = "NEXT:     number of external objects,                         OMC"
+  numberOfFunctions                   = "0"  cmt_numberOfFunctions                   = "NFUNC:    number of functions used by the simulation,         OMC"
+
+  numberOfContinuousStates            = "4"  cmt_numberOfContinuousStates            = "NX:       number of states,                                   FMI"
+  numberOfRealAlgebraicVariables      = "3"  cmt_numberOfRealAlgebraicVariables      = "NY:       number of real variables,                           OMC"
+  numberOfRealAlgebraicAliasVariables = "1"  cmt_numberOfRealAlgebraicAliasVariables = "NA:       number of alias variables,                          OMC"
+  numberOfRealParameters              = "6"  cmt_numberOfRealParameters              = "NP:       number of parameters,                               OMC"
+
+  numberOfIntegerAlgebraicVariables   = "0"  cmt_numberOfIntegerAlgebraicVariables   = "NYINT:    number of alg. int variables,                       OMC"
+  numberOfIntegerAliasVariables       = "0"  cmt_numberOfIntegerAliasVariables       = "NAINT:    number of alias int variables,                      OMC"
+  numberOfIntegerParameters           = "0"  cmt_numberOfIntegerParameters           = "NPINT:    number of int parameters,                           OMC"
+
+  numberOfStringAlgebraicVariables    = "0"  cmt_numberOfStringAlgebraicVariables    = "NYSTR:    number of alg. string variables,                    OMC"
+  numberOfStringAliasVariables        = "0"  cmt_numberOfStringAliasVariables        = "NASTR:    number of alias string variables,                   OMC"
+  numberOfStringParameters            = "0"  cmt_numberOfStringParameters            = "NPSTR:    number of string parameters,                        OMC"
+
+  numberOfBooleanAlgebraicVariables   = "0"  cmt_numberOfBooleanAlgebraicVariables   = "NYBOOL:   number of alg. bool variables,                      OMC"
+  numberOfBooleanAliasVariables       = "0"  cmt_numberOfBooleanAliasVariables       = "NABOOL:   number of alias bool variables,                     OMC"
+  numberOfBooleanParameters           = "0"  cmt_numberOfBooleanParameters           = "NPBOOL:   number of bool parameters,                          OMC" >
+
+
+  <!-- startTime, stopTime, tolerance are FMI specific, all others are OMC specific -->
+  <DefaultExperiment
+    startTime      = "0"
+    stopTime       = "20"
+    stepSize       = "0.004"
+    tolerance      = "1e-06"
+    solver        = "dassl"
+    outputFormat      = "mat"
+    variableFilter      = ".*" />
+
+  <!-- variables in the model -->
+  <ModelVariables>
+
+  <ScalarVariable
+    name = "gantryTrolley.omega"
+    valueReference = "1000"
+    description = "Angular velocity of pendulum (rad/s)"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "0" classType = "rSta"
+    isProtected = "false" hideResult = "" isEncrypted = "false" initNonlinear = "false"
+    fileName = "/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.mo" startLine = "17" startColumn = "7" endLine = "17" endColumn = "70" fileWritable = "true">
+    <Real fixed="false" useNominal="false" unit="rad/s" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "gantryTrolley.theta"
+    valueReference = "1001"
+    description = "Angular displacement of pendulum (rad)"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "1" classType = "rSta"
+    isProtected = "false" hideResult = "" isEncrypted = "false" initNonlinear = "false"
+    fileName = "/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.mo" startLine = "16" startColumn = "7" endLine = "16" endColumn = "62" fileWritable = "true">
+    <Real fixed="false" useNominal="false" unit="rad" displayUnit="deg" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "gantryTrolley.v"
+    valueReference = "1002"
+    description = "Velocity of trolley"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "2" classType = "rSta"
+    isProtected = "false" hideResult = "" isEncrypted = "false" initNonlinear = "false"
+    fileName = "/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.mo" startLine = "15" startColumn = "7" endLine = "15" endColumn = "42" fileWritable = "true">
+    <Real fixed="false" useNominal="false" unit="m/s" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "gantryTrolley.x"
+    valueReference = "1003"
+    description = "Displacement of trolley"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "3" classType = "rSta"
+    isProtected = "false" hideResult = "" isEncrypted = "false" initNonlinear = "false"
+    fileName = "/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.mo" startLine = "14" startColumn = "7" endLine = "14" endColumn = "46" fileWritable = "true">
+    <Real fixed="false" useNominal="false" unit="m" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "der(gantryTrolley.omega)"
+    valueReference = "1004"
+    description = "der(Angular velocity of pendulum (rad/s))"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "0" classType = "rDer"
+    isProtected = "false" hideResult = "" isEncrypted = "false" initNonlinear = "false"
+    fileName = "/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.mo" startLine = "17" startColumn = "7" endLine = "17" endColumn = "70" fileWritable = "true">
+    <Real fixed="false" useNominal="false" unit="s-2" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "der(gantryTrolley.theta)"
+    valueReference = "1005"
+    description = "der(Angular displacement of pendulum (rad))"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "1" classType = "rDer"
+    isProtected = "false" hideResult = "" isEncrypted = "false" initNonlinear = "false"
+    fileName = "/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.mo" startLine = "16" startColumn = "7" endLine = "16" endColumn = "62" fileWritable = "true">
+    <Real fixed="false" useNominal="false" unit="Hz" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "der(gantryTrolley.v)"
+    valueReference = "1006"
+    description = "der(Velocity of trolley)"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "2" classType = "rDer"
+    isProtected = "false" hideResult = "" isEncrypted = "false" initNonlinear = "false"
+    fileName = "/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.mo" startLine = "15" startColumn = "7" endLine = "15" endColumn = "42" fileWritable = "true">
+    <Real fixed="false" useNominal="false" unit="m.s-2" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "der(gantryTrolley.x)"
+    valueReference = "1007"
+    description = "der(Displacement of trolley)"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "3" classType = "rDer"
+    isProtected = "false" hideResult = "" isEncrypted = "false" initNonlinear = "false"
+    fileName = "/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.mo" startLine = "14" startColumn = "7" endLine = "14" endColumn = "46" fileWritable = "true">
+    <Real fixed="false" useNominal="false" unit="m.s-1" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "$cse1"
+    valueReference = "1008"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "0" classType = "rAlg"
+    isProtected = "true" hideResult = "true" isEncrypted = "false" initNonlinear = "false"
+    fileName = "" startLine = "0" startColumn = "0" endLine = "0" endColumn = "0" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "$cse2"
+    valueReference = "1009"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "1" classType = "rAlg"
+    isProtected = "true" hideResult = "true" isEncrypted = "false" initNonlinear = "false"
+    fileName = "" startLine = "0" startColumn = "0" endLine = "0" endColumn = "0" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "u_input"
+    valueReference = "1010"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "2" classType = "rAlg"
+    isProtected = "false" hideResult = "" isEncrypted = "false" initNonlinear = "false"
+    fileName = "/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.mo" startLine = "94" startColumn = "5" endLine = "94" endColumn = "17" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "gantryTrolley.M"
+    valueReference = "1011"
+    description = "Mass of trolley"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "0" classType = "rPar"
+    isProtected = "false" hideResult = "" isEncrypted = "false" initNonlinear = "false"
+    fileName = "/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.mo" startLine = "7" startColumn = "7" endLine = "7" endColumn = "49" fileWritable = "true">
+    <Real start="10.0" fixed="true" useNominal="false" min="0.0" unit="kg" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "gantryTrolley.dc"
+    valueReference = "1012"
+    description = "Damping factor for trolley"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "1" classType = "rPar"
+    isProtected = "false" hideResult = "" isEncrypted = "false" initNonlinear = "false"
+    fileName = "/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.mo" startLine = "10" startColumn = "7" endLine = "10" endColumn = "75" fileWritable = "true">
+    <Real start="2.0" fixed="true" useNominal="false" unit="N.s/m" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "gantryTrolley.dp"
+    valueReference = "1013"
+    description = "Damping factor for pendulum swing"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "2" classType = "rPar"
+    isProtected = "false" hideResult = "" isEncrypted = "false" initNonlinear = "false"
+    fileName = "/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.mo" startLine = "9" startColumn = "7" endLine = "9" endColumn = "84" fileWritable = "true">
+    <Real start="0.5" fixed="true" useNominal="false" unit="N.s/m" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "gantryTrolley.g"
+    valueReference = "1014"
+    description = "Gravitational acceleration"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "3" classType = "rPar"
+    isProtected = "false" hideResult = "" isEncrypted = "false" initNonlinear = "false"
+    fileName = "/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.mo" startLine = "11" startColumn = "7" endLine = "11" endColumn = "88" fileWritable = "true">
+    <Real start="9.80665" fixed="true" useNominal="false" unit="m/s2" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "gantryTrolley.m"
+    valueReference = "1015"
+    description = "Mass of pendulum bob&#39;s mass"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "4" classType = "rPar"
+    isProtected = "false" hideResult = "" isEncrypted = "false" initNonlinear = "false"
+    fileName = "/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.mo" startLine = "6" startColumn = "7" endLine = "6" endColumn = "62" fileWritable = "true">
+    <Real start="0.2" fixed="true" useNominal="false" min="0.0" unit="kg" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "gantryTrolley.r"
+    valueReference = "1016"
+    description = "Length of pendulum rope"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "5" classType = "rPar"
+    isProtected = "false" hideResult = "" isEncrypted = "false" initNonlinear = "false"
+    fileName = "/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.mo" startLine = "8" startColumn = "7" endLine = "8" endColumn = "58" fileWritable = "true">
+    <Real start="1.0" fixed="true" useNominal="false" min="0.0" unit="m" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "gantryTrolley.u"
+    valueReference = "1017"
+    description = "Control signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="u_input" aliasVariableId="10"
+    classIndex = "0" classType = "rAli"
+    isProtected = "false" hideResult = "" isEncrypted = "false" initNonlinear = "false"
+    fileName = "/home/ahmadshakleya/Documents/Modelica/Model/BIP_PACKAGE.mo" startLine = "20" startColumn = "7" endLine = "20" endColumn = "40" fileWritable = "true">
+    <Real fixed="false" useNominal="false" unit="N" />
+  </ScalarVariable>
+
+
+
+  </ModelVariables>
+
+
+</fmiModelDescription>
+
