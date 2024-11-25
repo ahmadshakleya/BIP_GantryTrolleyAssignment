@@ -57,4 +57,4 @@ optimal_dp = 0 + optimal_index * 0.01
 print(f"Minimum SSE: {min_val}")
 print(f"Optimal Dp index: {optimal_index}")
 print(f"Optimal Dp value: {optimal_dp}")
-print(f"SSE for Dp=4.79: {sse_dp_list[optimal_index]}")  # Assuming 479 corresponds to DC=4.79
+print(f"SSE for Dp=0.12: {sse_dp_list[optimal_index]}")  # Assuming 479 corresponds to DC=4.79
